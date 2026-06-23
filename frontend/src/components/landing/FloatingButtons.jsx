@@ -15,7 +15,7 @@ export default function FloatingButtons({ onSupport }) {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-3">
+    <div className="fixed bottom-24 right-6 z-[80] flex flex-col items-end gap-3">
       {/* support floating (always visible) */}
       <button
         data-testid="floating-support-btn"
