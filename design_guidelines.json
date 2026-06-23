@@ -1,0 +1,150 @@
+{
+  "theme": {
+    "mode": "dark",
+    "archetype": "7 (Electric & Neon)",
+    "description": "Futuristic, high-energy neon dark mode with glassmorphism overlays and floating particles. The aesthetic relies on ultra-deep matte blacks punctuated by two interchangeable neon accent colors (Lime Green or Aqua/Cyan)."
+  },
+  "colors": {
+    "background": {
+      "default": "#050505",
+      "surface": "#0A0A0A",
+      "glass": "rgba(255, 255, 255, 0.03)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "themes": {
+      "lime": {
+        "primary": "#C6FF00",
+        "primaryHover": "#AEE600",
+        "glow": "rgba(198, 255, 0, 0.4)",
+        "border": "rgba(198, 255, 0, 0.2)"
+      },
+      "aqua": {
+        "primary": "#00E5FF",
+        "primaryHover": "#00C9E0",
+        "glow": "rgba(0, 229, 255, 0.4)",
+        "border": "rgba(0, 229, 255, 0.2)"
+      }
+    }
+  },
+  "typography": {
+    "families": {
+      "heading": "'Unbounded', sans-serif",
+      "body": "'Outfit', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm uppercase tracking-[0.2em] font-mono"
+    }
+  },
+  "layout_and_spacing": {
+    "grid": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8 lg:gap-12",
+    "padding_philosophy": "Generous. Sections should use py-24 or py-32 to breathe. Containers with borders must have internal padding (p-8).",
+    "border_radius": "rounded-2xl for primary cards, rounded-full for buttons and pills."
+  },
+  "motion_and_interactions": {
+    "library": "framer-motion",
+    "global": "Subtle float animations for background elements. Scroll-triggered fade-up and stagger for lists.",
+    "hover_states": "Cards lift slightly (-translate-y-2), borders glow with the active theme color (shadow-[0_0_20px_var(--glow)]).",
+    "tracing_beam": "Use Aceternity-style moving gradient borders for Pricing and Course cards to simulate electricity/energy."
+  },
+  "components": {
+    "header": {
+      "style": "Crystal Glass: sticky top-0 z-50 backdrop-blur-xl bg-black/60 border-b border-white/5",
+      "elements": [
+        "Brand Logo (Left)",
+        "Navigation Links (Center - hidden on mobile)",
+        "Theme Switcher Icon (Lime/Aqua toggle)",
+        "Language Switcher (PT/EN toggle)",
+        "Buy me a coffee / Support button (Right)"
+      ]
+    },
+    "hero": {
+      "layout": "Grid split (text on left, floating image card on right).",
+      "visuals": "Floating glowing particles in the background. The hero image should be inside a glassmorphic card with a neon border. Use `Unbounded` for the massive headline.",
+      "cta": "Primary button with pulsing neon shadow and hover effect.",
+      "image_overlay": "bg-gradient-to-r from-black/80 via-black/40 to-transparent for text readability."
+    },
+    "course_catalog": {
+      "layout": "Bento Grid or masonry-style staggered cards.",
+      "card_style": "Dark surface (#0A0A0A) with 1px border. On hover, the border illuminates in the active theme color.",
+      "items": ["Baixo", "Guitarra", "Violão", "Teclado", "Bateria"]
+    },
+    "pricing": {
+      "style": "Bold, center-aligned section. The main pricing card (97 BRL) must have the most aggressive neon styling.",
+      "elements": [
+        "Base price slashed out",
+        "Launch discount prominently displayed (97 BRL)",
+        "Simulated 'Buy via Stripe' button",
+        "Feature list with neon checkmarks"
+      ]
+    },
+    "study_tools": {
+      "style": "Retro-Futuristic / Terminal UI",
+      "description": "A section showing simulated tools like Metronome and Tuner. Use mono fonts and high-contrast neon borders to look like a digital dashboard."
+    },
+    "testimonials": {
+      "style": "Marquee / The Kinetic Texture",
+      "layout": "Use react-fast-marquee. Cards with minimal opacity backgrounds floating horizontally."
+    },
+    "footer": {
+      "layout": "Massive bottom padding (py-32). Giant brand text at the bottom. Contact info and social links."
+    },
+    "floating_elements": {
+      "back_to_top": "Fixed bottom-right button, neon outline, backdrop blur, appears on scroll.",
+      "background_shapes": "Absolute positioned blurred circles (blur-[120px]) in dark grey or low-opacity active theme color."
+    }
+  },
+  "media": {
+    "musician_hero": {
+      "url": "https://images.pexels.com/photos/33418886/pexels-photo-33418886.jpeg",
+      "alt": "Musician in futuristic attire with electric guitar",
+      "usage": "Hero section main image"
+    },
+    "course_bass": {
+      "url": "https://images.pexels.com/photos/27638312/pexels-photo-27638312.jpeg",
+      "alt": "Neon bass guitar",
+      "usage": "Course catalog - Baixo"
+    },
+    "course_guitar": {
+      "url": "https://images.pexels.com/photos/17028509/pexels-photo-17028509.jpeg",
+      "alt": "Electric guitar neon sign",
+      "usage": "Course catalog - Guitarra"
+    },
+    "course_acoustic": {
+      "url": "https://images.unsplash.com/photo-1648006916092-9abc41e56b7d",
+      "alt": "Man playing acoustic guitar in the dark",
+      "usage": "Course catalog - Violão"
+    },
+    "course_drums": {
+      "url": "https://images.pexels.com/photos/20252599/pexels-photo-20252599.jpeg",
+      "alt": "Dimly lit drum set on stage",
+      "usage": "Course catalog - Bateria"
+    },
+    "course_keyboard": {
+      "url": "https://images.unsplash.com/photo-1598281944085-dc202b6a2b6e",
+      "alt": "Man playing synthesizer",
+      "usage": "Course catalog - Teclado"
+    }
+  },
+  "accessibility": {
+    "testing": "All interactive elements (theme toggle, language toggle, buy buttons, tool triggers) MUST include data-testid attributes (e.g., data-testid='theme-toggle-btn').",
+    "contrast": "Text must meet APCA standards against backgrounds. Use text-shadow over images if necessary."
+  },
+  "technical_notes": {
+    "dependencies": [
+      "framer-motion (Animations)",
+      "lucide-react (Icons)",
+      "react-fast-marquee (Testimonials)",
+      "clsx & tailwind-merge (Class handling)"
+    ],
+    "context_state": "Need a React Context or Zustand store to manage activeTheme ('lime' | 'aqua') and language ('pt' | 'en') globally so the UI reacts instantly."
+  }
+}
