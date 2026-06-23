@@ -61,6 +61,20 @@ let webpackConfig = {
 };
 
 webpackConfig.devServer = (devServerConfig) => {
+  // webpack-dev-server v5 removed several legacy keys injected by react-scripts.
+  delete devServerConfig.onBeforeSetupMiddleware;
+  delete devServerConfig.onAfterSetupMiddleware;
+  if (Object.prototype.hasOwnProperty.call(devServerConfig, "https")) {
+    const useHttps = devServerConfig.https;
+    delete devServerConfig.https;
+    if (useHttps) {
+      devServerConfig.server =
+        typeof useHttps === "object"
+          ? { type: "https", options: useHttps }
+          : "https";
+    }
+  }
+
   // Add health check endpoints if enabled
   if (config.enableHealthCheck && setupHealthEndpoints && healthPluginInstance) {
     const originalSetupMiddlewares = devServerConfig.setupMiddlewares;

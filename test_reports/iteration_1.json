@@ -1,0 +1,36 @@
+{
+  "summary": "Frontend-only Playwright testing for NeonSom Portuguese musician landing page. Verified hero/courses/plans/tools/about/contact sections, theme toggle (lime<->aqua via --neon CSS var), language toggle (PT<->EN), 5 course cards + CTA scroll to plans, 3 plan cards with simulated payment toasts, Metronome (BPM +/-, slider, start/stop with Web Audio), Tuner notes, Support modal (header + floating triggers, amount selection, confirm toast), Contact form (fill + submit + toast + reset), and Mobile menu at 390px. 34/35 functional checks pass. Only failure: back-to-top button is visually intercepted by the Emergent preview badge in the bottom-right corner.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "FloatingButtons / back-to-top-btn",
+        "issue": "Real user click on back-to-top-btn is intercepted by the Emergent preview badge <a id='emergent-badge'> sitting in bottom-right corner. Playwright reports 'emergent-badge intercepts pointer events'. JS .click() works and scrolls to top correctly, so the handler is fine — issue is z-index/stacking. Floating buttons container uses z-[60]; emergent badge has higher z-index. Consider raising floating buttons z-index above the badge or shifting back-to-top a few px to clear the badge area. Note: badge only exists in preview environment, not in production.",
+        "selector": "[data-testid='back-to-top-btn']",
+        "priority": "LOW"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "(Optional / low priority) Raise z-index of FloatingButtons wrapper above the Emergent preview badge, or offset back-to-top-btn position so it does not collide with the badge in the bottom-right corner. This only affects the preview environment; production will not include the badge."
+  ],
+  "critical_code_review_comments": [
+    "Pricing.handleBuy uses toast(t.simulated, { description: plan.name }) — works, but consider toast.success for visual consistency with Contact/Support which use toast.success.",
+    "StudyTools Metronome has a useEffect that re-creates the setInterval on every bpm change while running — works but could drift; consider scheduler-based clicks. Non-blocking.",
+    "FloatingButtons z-[60] is below Emergent preview badge; raise to z-[80] or higher for preview environment reliability.",
+    "Tuner playTone uses setTimeout to clear playing state after 2000ms while gain.exponentialRampToValueAtTime ends at 2.0s — fine, but the osc node remains in nodeRef briefly. Not a bug.",
+    "No accessibility labels on theme-toggle-btn beyond title; consider aria-label for screen readers.",
+    "Contact form submission is intentionally simulated (toast only) — confirmed acceptable per problem statement."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not tested per request)", "frontend": "97% (34/35 functional checks)"},
+  "test_credentials": "N/A - no auth",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Landing page is pure client-side. All listed data-testids are present and functional: theme-toggle-btn (verified --neon flips between #C6FF00 lime and #00E5FF aqua), lang-toggle-btn (PT<->EN label + i18n strings re-render including nav-courses showing 'COURSES'/'CURSOS'), course-card-{baixo,guitarra,violao,teclado,bateria} all present, course-cta-* scrolls to #plans, plan-card-{single,full,vip} present, plan-buy-* fire sonner toast with t.simulated description, metronome-bpm updates via metronome-plus/minus/slider, metronome-toggle starts/stops Web Audio with no errors, tuner-note-* (6 notes) clickable, support-header-btn and floating-support-btn both open support-modal, coffee-amount-* selectable, support-confirm-btn fires success toast and closes modal, back-to-top-btn appears after scrollY>500 and handler scrolls to 0 (JS click verified) — only visual overlap with emergent-badge prevents real pointer clicks in preview, contact-form submit toasts + clears, mobile-menu-btn opens mobile-menu with mobile-nav-* links at 390px. No console errors observed.",
+  "rca of the issue": "Back-to-top click interception RCA: Floating buttons wrapper in /app/frontend/src/components/landing/FloatingButtons.jsx uses 'fixed bottom-6 right-6 z-[60]'. The Emergent preview badge (<a id='emergent-badge' target='_blank'>) is rendered with a higher stacking context at the same bottom-right region. Playwright logs: '<a target=\"_blank\" id=\"emergent-badge\" ...> intercepts pointer events'. Reproduction: scroll page beyond 500px, then click [data-testid='back-to-top-btn'] with a real pointer event. Mitigation: increase z-index of the floating buttons container above the badge (e.g., z-[100]) or relocate back-to-top a few pixels up/left. Production deployments without the Emergent badge are unaffected."
+}
