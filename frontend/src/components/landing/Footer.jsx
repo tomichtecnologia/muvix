@@ -14,12 +14,12 @@ export default function Footer() {
         <div className="flex flex-col items-start justify-between gap-8 pb-12 md:flex-row md:items-center">
           <div>
             <div className="font-head text-xl font-black tracking-tighter text-white">
-              NEON<span className="neon-text">SOM</span>
+              MU<span className="neon-text">VIX</span>
             </div>
-            <p className="mt-2 text-sm text-zinc-500">{t.footer.tagline}</p>
+            <p className="mt-2 text-sm text-zinc-500">Academia de Músicas · {t.footer.tagline}</p>
           </div>
           <div className="flex items-center gap-2 font-mono-x text-xs uppercase tracking-wider text-zinc-500">
-            {t.footer.built} <Heart size={13} className="neon-text" fill="currentColor" /> NEONSOM
+            {t.footer.built} <Heart size={13} className="neon-text" fill="currentColor" /> MUVIX
           </div>
         </div>
 
@@ -32,12 +32,12 @@ export default function Footer() {
               WebkitTextStroke: "1px var(--neon-border)",
             }}
           >
-            NEONSOM
+            MUVIX
           </h2>
         </div>
 
         <div className="border-t border-white/5 py-6 text-center font-mono-x text-[11px] uppercase tracking-wider text-zinc-600">
-          © {year} NEONSOM · {t.footer.rights}
+          © {year} MUVIX · {t.footer.rights}
         </div>
       </div>
     </footer>

@@ -7,7 +7,7 @@ import { useT } from "../../i18n";
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1762289581607-fc292299dc87?crop=entropy&cs=srgb&fm=jpg&q=85&w=1100";
+  "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/93ayhmd1_WhatsApp%20Image%202026-06-22%20at%2021.43.58%20%281%29.jpeg";
 
 export default function Hero() {
   const { lang } = useSite();
@@ -121,7 +121,7 @@ export default function Hero() {
                 {t.about.kicker}
               </div>
               <div className="font-head text-xl font-bold text-white">
-                NEONSOM Studio
+                Muvix Studio
               </div>
             </div>
           </div>

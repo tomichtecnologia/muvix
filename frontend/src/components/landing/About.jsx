@@ -5,7 +5,7 @@ import { useSite } from "../../context/SiteContext";
 import { useT } from "../../i18n";
 
 const ABOUT_IMG =
-  "https://images.unsplash.com/photo-1762289350936-783284eb2f4a?crop=entropy&cs=srgb&fm=jpg&q=85&w=900";
+  "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/458dem7x_WhatsApp%20Image%202026-06-22%20at%2021.43.58%20%282%29.jpeg";
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 

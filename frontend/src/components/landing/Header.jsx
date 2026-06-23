@@ -45,9 +45,14 @@ export default function Header({ onSupport }) {
         <button
           data-testid="brand-logo"
           onClick={() => go("hero")}
-          className="font-head text-lg font-black tracking-tighter text-white"
+          className="flex flex-col items-start leading-none"
         >
-          NEON<span className="neon-text">SOM</span>
+          <span className="font-head text-lg font-black tracking-tighter text-white">
+            MU<span className="neon-text">VIX</span>
+          </span>
+          <span className="font-mono-x text-[8px] uppercase tracking-[0.28em] text-zinc-500">
+            Academia de Músicas
+          </span>
         </button>
 
         {/* desktop nav */}

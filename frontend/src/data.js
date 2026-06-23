@@ -5,13 +5,13 @@ export const COURSES = [
   {
     key: "baixo",
     icon: "Guitar",
-    image: "https://images.pexels.com/photos/8044065/pexels-photo-8044065.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    image: "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/0bi3x8yy_WhatsApp%20Image%202026-06-22%20at%2021.43.58.jpeg",
     lessons: 48,
   },
   {
     key: "guitarra",
     icon: "Guitar",
-    image: "https://images.unsplash.com/photo-1582220107107-590dc8b0fad3?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000",
+    image: "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/mxwbpmv5_WhatsApp%20Image%202026-06-22%20at%2021.46.08.jpeg",
     lessons: 62,
   },
   {
