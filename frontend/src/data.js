@@ -78,6 +78,7 @@ export const COFFEE_AMOUNTS = [5, 15, 30];
 
 // Contatos oficiais Muvix (número: +55 27 99719 6217)
 export const CONTACT = {
+  phone: "5527997196217",
   whatsapp: "https://wa.me/5527997196217?text=" + encodeURIComponent("Olá! Tenho interesse nos cursos da Muvix."),
   telegram: "https://t.me/+5527997196217",
   instagram: "https://instagram.com/muvixescola",

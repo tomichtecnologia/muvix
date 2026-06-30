@@ -24,6 +24,7 @@ export default function Header({ onSupport }) {
     { id: "courses", label: t.nav.courses },
     { id: "plans", label: t.nav.plans },
     { id: "tools", label: t.nav.tools },
+    { id: "adote", label: t.nav.adote },
     { id: "about", label: t.nav.about },
     { id: "contact", label: t.nav.contact },
   ];

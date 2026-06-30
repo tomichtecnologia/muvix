@@ -7,6 +7,7 @@ import Courses from "../components/landing/Courses";
 import Pricing from "../components/landing/Pricing";
 import StudyTools from "../components/landing/StudyTools";
 import Testimonials from "../components/landing/Testimonials";
+import AdoteUmAluno from "../components/landing/AdoteUmAluno";
 import About from "../components/landing/About";
 import Contact from "../components/landing/Contact";
 import Footer from "../components/landing/Footer";
@@ -28,6 +29,7 @@ export default function Landing() {
         <Pricing />
         <StudyTools />
         <Testimonials />
+        <AdoteUmAluno />
         <About />
         <Contact />
       </main>

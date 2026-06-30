@@ -1,6 +1,6 @@
 export const translations = {
   pt: {
-    nav: { courses: "Cursos", plans: "Planos", tools: "Ferramentas", about: "Sobre", contact: "Contato" },
+    nav: { courses: "Cursos", plans: "Planos", tools: "Ferramentas", adote: "Adote um Aluno", about: "Sobre", contact: "Contato" },
     support: "Apoie o músico",
     hero: {
       tagline: "ESCOLA DE MÚSICA · ONLINE",
@@ -93,6 +93,23 @@ export const translations = {
       send: "Enviar mensagem",
       sent: "Mensagem enviada! Em breve respondo.",
     },
+    adote: {
+      kicker: "INICIATIVA SOCIAL",
+      title: "Adote um Aluno",
+      desc: "Tem gente que sonha em aprender música mas não tem condições. Você pode apadrinhar essas aulas e mudar a história de alguém pela música.",
+      steps: [
+        { t: "Você apadrinha", d: "Escolhe presentear um curso ou contribuir com o valor que puder." },
+        { t: "A gente conecta", d: "Selecionamos um aluno com vontade real de aprender e sem condições de pagar." },
+        { t: "Ele aprende", d: "O aluno ganha acesso às aulas e você pode acompanhar a evolução dele." },
+      ],
+      sponsorTitle: "Quero apadrinhar",
+      sponsorDesc: "Presenteie aulas pra quem sonha em tocar. Pode ser um curso inteiro ou o valor que quiser doar.",
+      sponsorCta: "Apadrinhar agora",
+      scholarTitle: "Preciso de uma bolsa",
+      scholarDesc: "Tem vontade de aprender mas não tem como pagar agora? Conta pra gente — vamos te conectar a um padrinho.",
+      scholarCta: "Pedir uma bolsa",
+      impact: "Cada padrinho coloca um instrumento na mão de quem mais quer aprender. 💚",
+    },
     footer: {
       tagline: "Música que se aprende tocando.",
       rights: "Todos os direitos reservados.",
@@ -102,7 +119,7 @@ export const translations = {
     backToTop: "Voltar ao topo",
   },
   en: {
-    nav: { courses: "Courses", plans: "Plans", tools: "Tools", about: "About", contact: "Contact" },
+    nav: { courses: "Courses", plans: "Plans", tools: "Tools", adote: "Adopt a Student", about: "About", contact: "Contact" },
     support: "Support the musician",
     hero: {
       tagline: "MUSIC SCHOOL · ONLINE",
@@ -194,6 +211,23 @@ export const translations = {
       message: "Your message",
       send: "Send message",
       sent: "Message sent! I'll reply soon.",
+    },
+    adote: {
+      kicker: "SOCIAL INITIATIVE",
+      title: "Adopt a Student",
+      desc: "Some people dream of learning music but can't afford it. You can sponsor their lessons and change someone's story through music.",
+      steps: [
+        { t: "You sponsor", d: "Choose to gift a course or contribute whatever amount you can." },
+        { t: "We connect", d: "We select a student with a real will to learn who can't afford to pay." },
+        { t: "They learn", d: "The student gets access to the lessons and you can follow their progress." },
+      ],
+      sponsorTitle: "I want to sponsor",
+      sponsorDesc: "Gift lessons to someone who dreams of playing. It can be a full course or any amount you'd like to donate.",
+      sponsorCta: "Sponsor now",
+      scholarTitle: "I need a scholarship",
+      scholarDesc: "Eager to learn but can't pay right now? Tell us — we'll connect you with a sponsor.",
+      scholarCta: "Request a scholarship",
+      impact: "Every sponsor puts an instrument in the hands of someone eager to learn. 💚",
     },
     footer: {
       tagline: "Music you learn by playing.",
