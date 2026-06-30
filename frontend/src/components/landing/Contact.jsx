@@ -4,6 +4,7 @@ import { Send, Mail, Instagram, Youtube, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import { useSite } from "../../context/SiteContext";
 import { useT } from "../../i18n";
+import { CONTACT } from "../../data";
 
 export default function Contact() {
   const { lang } = useSite();
@@ -17,10 +18,11 @@ export default function Contact() {
   };
 
   const socials = [
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: Youtube, label: "YouTube", href: "#" },
-    { icon: MessageCircle, label: "WhatsApp", href: "#" },
-    { icon: Mail, label: "Email", href: "#" },
+    { icon: Instagram, label: "Instagram", href: CONTACT.instagram },
+    { icon: Youtube, label: "YouTube", href: CONTACT.youtube },
+    { icon: MessageCircle, label: "WhatsApp", href: CONTACT.whatsapp },
+    { icon: Send, label: "Telegram", href: CONTACT.telegram },
+    { icon: Mail, label: "Email", href: `mailto:${CONTACT.email}` },
   ];
 
   return (
@@ -48,6 +50,8 @@ export default function Contact() {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
                     data-testid={`social-${s.label.toLowerCase()}`}
                     aria-label={s.label}
                     className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/12 text-white transition-all hover:border-[var(--neon-border)] hover:text-[var(--neon)]"

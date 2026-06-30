@@ -84,6 +84,27 @@ body {
 .float-slow { animation: float-slow 9s ease-in-out infinite; }
 .float-rev { animation: float-rev 11s ease-in-out infinite; }
 
+/* tarja "em desenvolvimento": pisca (aparece e some) chamando atencao */
+@keyframes banner-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.banner-blink { animation: banner-blink 1.8s ease-in-out infinite; }
+
+/* ken-burns: movimento suave (zoom lento) nas fotos */
+@keyframes kenburns {
+  0%, 100% { transform: scale(1.02); }
+  50% { transform: scale(1.12); }
+}
+.kenburns {
+  animation: kenburns 16s ease-in-out infinite;
+  transform-origin: center 22%;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kenburns { animation: none; transform: none; }
+}
+
 @keyframes pulse-ring {
   0% { box-shadow: 0 0 0 0 var(--neon-glow); }
   70% { box-shadow: 0 0 0 18px rgba(0,0,0,0); }

@@ -6,8 +6,7 @@ import { useT } from "../../i18n";
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
-const HERO_IMG =
-  "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/93ayhmd1_WhatsApp%20Image%202026-06-22%20at%2021.43.58%20%281%29.jpeg";
+const HERO_IMG = "/images/hero.jpg";
 
 export default function Hero() {
   const { lang } = useSite();
@@ -113,7 +112,7 @@ export default function Hero() {
             <img
               src={HERO_IMG}
               alt="Musician"
-              className="h-[520px] w-full object-cover"
+              className="kenburns h-[520px] w-full object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">

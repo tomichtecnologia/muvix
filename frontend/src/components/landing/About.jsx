@@ -4,8 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { useSite } from "../../context/SiteContext";
 import { useT } from "../../i18n";
 
-const ABOUT_IMG =
-  "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/458dem7x_WhatsApp%20Image%202026-06-22%20at%2021.43.58%20%282%29.jpeg";
+const ABOUT_IMG = "/images/about.jpg";
 
 const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
@@ -28,7 +27,7 @@ export default function About() {
             style={{ borderColor: "var(--neon-border)", boxShadow: "0 0 50px var(--neon-glow)" }}
             data-testid="about-image"
           >
-            <img src={ABOUT_IMG} alt="Musician portrait" className="h-[460px] w-full object-cover" />
+            <img src={ABOUT_IMG} alt="Musician portrait" className="kenburns h-[460px] w-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-transparent to-transparent" />
           </div>
           <div className="float-slow glass absolute -right-4 top-8 hidden rounded-2xl px-5 py-4 sm:block">

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  muvix-frontend:
+    image: nginx:alpine
+    container_name: muvix-frontend
+    restart: always
+    volumes:
+      - ./build:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik_default"
+      - "traefik.http.routers.muvix.rule=Host(`academiamuvix.com.br`) || Host(`www.academiamuvix.com.br`)"
+      - "traefik.http.routers.muvix.entrypoints=websecure"
+      - "traefik.http.routers.muvix.tls=true"
+      - "traefik.http.routers.muvix.tls.certresolver=myresolver"
+      - "traefik.http.services.muvix.loadbalancer.server.port=80"
+    networks:
+      - traefik_default
+
+networks:
+  traefik_default:
+    external: true

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ArrowUp, Coffee } from "lucide-react";
+import { ArrowUp, Coffee, MessageCircle } from "lucide-react";
 import { useSite } from "../../context/SiteContext";
 import { useT } from "../../i18n";
+import { CONTACT } from "../../data";
 
 export default function FloatingButtons({ onSupport }) {
   const { lang } = useSite();
@@ -16,6 +17,19 @@ export default function FloatingButtons({ onSupport }) {
 
   return (
     <div className="fixed bottom-24 right-6 z-[80] flex flex-col items-end gap-3">
+      {/* whatsapp floating (always visible) */}
+      <a
+        href={CONTACT.whatsapp}
+        target="_blank"
+        rel="noreferrer"
+        data-testid="floating-whatsapp-btn"
+        aria-label="WhatsApp"
+        className="flex items-center justify-center rounded-full text-white transition-transform hover:scale-110"
+        style={{ background: "#25D366", height: 52, width: 52, boxShadow: "0 0 24px rgba(37,211,102,0.5)" }}
+      >
+        <MessageCircle size={24} />
+      </a>
+
       {/* support floating (always visible) */}
       <button
         data-testid="floating-support-btn"

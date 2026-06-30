@@ -5,31 +5,31 @@ export const COURSES = [
   {
     key: "baixo",
     icon: "Guitar",
-    image: "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/0bi3x8yy_WhatsApp%20Image%202026-06-22%20at%2021.43.58.jpeg",
+    image: "/images/baixo.jpg",
     lessons: 48,
   },
   {
     key: "guitarra",
     icon: "Guitar",
-    image: "https://customer-assets.emergentagent.com/job_sound-master-lab/artifacts/mxwbpmv5_WhatsApp%20Image%202026-06-22%20at%2021.46.08.jpeg",
+    image: "/images/guitarra.jpg",
     lessons: 62,
   },
   {
     key: "violao",
     icon: "Music",
-    image: "https://images.unsplash.com/photo-1648006916092-9abc41e56b7d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000",
+    image: "/images/violao.jpg",
     lessons: 40,
   },
   {
     key: "teclado",
     icon: "Piano",
-    image: "https://images.unsplash.com/photo-1681218865777-846f6b401d7e?crop=entropy&cs=srgb&fm=jpg&q=85&w=1000",
+    image: "/images/teclado.jpg",
     lessons: 54,
   },
   {
     key: "bateria",
     icon: "Drum",
-    image: "https://images.pexels.com/photos/20252599/pexels-photo-20252599.jpeg?auto=compress&cs=tinysrgb&w=1000",
+    image: "/images/bateria.jpg",
     lessons: 45,
   },
 ];
@@ -75,3 +75,12 @@ export const TUNER_NOTES = [
 ];
 
 export const COFFEE_AMOUNTS = [5, 15, 30];
+
+// Contatos oficiais Muvix (número: +55 27 99719 6217)
+export const CONTACT = {
+  whatsapp: "https://wa.me/5527997196217?text=" + encodeURIComponent("Olá! Tenho interesse nos cursos da Muvix."),
+  telegram: "https://t.me/+5527997196217",
+  instagram: "https://instagram.com/muvixescola",
+  youtube: "https://www.youtube.com/@renanverasoficial",
+  email: "pr.renanveras@gmail.com",
+};

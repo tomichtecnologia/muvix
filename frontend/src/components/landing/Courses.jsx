@@ -53,11 +53,11 @@ export default function Courses() {
                   e.currentTarget.style.boxShadow = "";
                 }}
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <img
                     src={c.image}
                     alt={info.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="kenburns h-full w-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent" />
                   <div

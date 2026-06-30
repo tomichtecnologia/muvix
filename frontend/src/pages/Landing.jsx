@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FloatingBackground from "../components/landing/FloatingBackground";
+import DevBanner from "../components/landing/DevBanner";
 import Header from "../components/landing/Header";
 import Hero from "../components/landing/Hero";
 import Courses from "../components/landing/Courses";
@@ -19,6 +20,7 @@ export default function Landing() {
   return (
     <div className="relative min-h-screen bg-[#050505]">
       <FloatingBackground />
+      <DevBanner />
       <Header onSupport={openSupport} />
       <main className="relative">
         <Hero />
